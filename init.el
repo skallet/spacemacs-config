@@ -239,7 +239,8 @@ This function should only modify configuration layer settings."
                                        :location
                                        (recipe :fetcher github
                                                :repo "emacs-evil/evil-surround"
-                                               :commit "f273821f575ace519066fb106ee45a5b8577475f")))
+                                               :commit "f273821f575ace519066fb106ee45a5b8577475f"))
+                                      kibit-helper)
 
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
@@ -415,6 +416,7 @@ It should only modify the values of Spacemacs settings."
    ;; Press `SPC T n' to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(doom-solarized-dark
+                         doom-solarized-light
                          doom-gruvbox
                          doom-gruvbox-light
                          spacemacs-dark
