@@ -79,7 +79,7 @@
   (evil-normal-state))
 ;;
 ;; Assign keybinding to the toggle-reader-comment-sexp function
-(define-key global-map (kbd "C-#") 'clojure-toggle-reader-comment-sexp)
+(define-key global-map (kbd "C-;") 'clojure-toggle-reader-comment-sexp)
 ;;
 ;;
 ;; Toggle view of a clojure `(comment ,,,) block'
