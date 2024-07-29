@@ -234,14 +234,19 @@ This function should only modify configuration layer settings."
    ;; `dotspacemacs/user-config'. To use a local version of a package, use the
    ;; `:location' property: '(your-package :location "~/path/to/your-package/")
    ;; Also include the dependencies as they will not be resolved automatically.
-   dotspacemacs-additional-packages '(clojure-essential-ref
-                                      (evil-surround
-                                       :location
-                                       (recipe :fetcher github
-                                               :repo "emacs-evil/evil-surround"
-                                               :commit "f273821f575ace519066fb106ee45a5b8577475f"))
-                                      kibit-helper
-				      sqlite3)
+   dotspacemacs-additional-packages
+   '(clojure-essential-ref
+     (evil-surround
+      :location
+      (recipe :fetcher github
+              :repo "emacs-evil/evil-surround"
+              :commit "f273821f575ace519066fb106ee45a5b8577475f"))
+     kibit-helper
+     (helm-ag :location (recipe
+                         :fetcher github
+                         :repo "zozowell/helm-ag"
+                         :branch "further-support-rg"))
+     sqlite3)
 
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
@@ -440,7 +445,7 @@ It should only modify the values of Spacemacs settings."
    ;; a non-negative integer (pixel size), or a floating-point (point size).
    ;; Point size is recommended, because it's device independent. (default 10.0)
    dotspacemacs-default-font '("Fira Code"
-                               :size 12.0
+                               :size 14.0
                                :weight normal
                                :width normal)
 
@@ -768,7 +773,7 @@ before packages are loaded."
   (setq user-config-file (file-truename (concat dotspacemacs-directory "user-config.el")))
   (load user-config-file)
 
-  ;; Clojure Layer additionalb configuration
+  ;; Clojure Layer additional configuration
   (setq clojure-config-file (file-truename (concat dotspacemacs-directory "clojure-config.el")))
   (load clojure-config-file)
 
