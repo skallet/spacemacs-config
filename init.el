@@ -130,8 +130,10 @@ This function should only modify configuration layer settings."
           lsp-ui-doc-enable nil                           ; doc hover popups
           lsp-ui-sideline-enable nil                      ; sidebar code actions visual indicator
           treemacs-space-between-root-nodes nil           ; spacing in treemacs views
-          lsp-log-io t                                    ; Log client-server json communication
-          )
+
+          ;; Optimization for large files
+          lsp-file-watch-threshold 10000
+          lsp-log-io nil)
 
      markdown
 
