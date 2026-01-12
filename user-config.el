@@ -4,8 +4,8 @@
 ;; General Configuration changes
 ;; ---------------------------------------
 
-; (setq python-shell-interpreter "C:/Users/blaze/scoop/apps/python/current/python.exe")
-; (python :variables python-backend 'anaconda)
+                                        ; (setq python-shell-interpreter "C:/Users/blaze/scoop/apps/python/current/python.exe")
+                                        ; (python :variables python-backend 'anaconda)
 (global-set-key (kbd "<escape>") 'keyboard-escape-quit)
 (setq projectile-create-missing-test-files t)
 
@@ -37,3 +37,6 @@
 ;; https://github.com/syl20bnr/spacemacs/issues/16276
 (remove-hook 'helm-mode-hook 'helm-descbinds-mode)
 ;; ---------------------------------------
+
+(spacemacs/set-leader-keys "ox" 'browse-url)
+(spacemacs/set-leader-keys "ot" 'treemacs-display-current-project-exclusively)
