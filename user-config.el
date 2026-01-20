@@ -26,7 +26,7 @@
 ;; ---------------------------------------
 ;; Searching
 ;; replace / search with helm-swoop in Evil normal state
-(evil-global-set-key 'normal "/" 'helm-swoop)
+(evil-global-set-key 'normal "/" 'helm-swoop-without-pre-input)
 ;;
 ;; ---------------------------------------
 
